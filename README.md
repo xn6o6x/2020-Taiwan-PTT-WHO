@@ -4,6 +4,18 @@
 
 ---
 
+1. [ 前言 ](#前言)
+2. [ 資料集 ](#資料集)
+3. [ 與 WHO 有關的文章 ](#WHO)
+4. [ 詞頻分析 ](#詞頻分析)
+5. [ 歧視性言論 ](#歧視性言論)
+   - [ 發表歧視性言論的鄉民 ](#發表歧視性言論的鄉民)
+   - [ 含有歧視性言論的發文 ](#含有歧視性言論的發文)
+   - [ 含有歧視性言論的留言 ](#含有歧視性言論的留言)
+
+---
+
+<a name="前言"></a>
 ## 前言
 
 昨天（14）看到兩篇文章，心生好奇，遂復現同樣的分析。
@@ -12,12 +24,14 @@
 
 [文章 2：天下雜誌｜學者3數據，揪台灣人都怎麼「罵」譚德塞](https://www.cw.com.tw/article/article.action?id=5099796)
 
+<a name="資料集"></a>
 ## 資料集
 
 PTT 八卦版 27900 頁～39199 頁（1/1～4/15）共 219461 篇文章。
 
 > 使用 [GitHub｜jwlin/ptt-web-crawler](https://github.com/jwlin/ptt-web-crawler) 爬取 PTT 文章
 
+<a name="WHO"></a>
 ## 與 WHO 有關的文章
 
 參考前言提到的兩篇文章，舉凡文章中（不包括留言）出現「WHO、世界衛生組織、世衛組織、譚德塞」任一關鍵字，即判定為**與 WHO 有關**。
@@ -32,6 +46,7 @@ PTT 八卦版 27900 頁～39199 頁（1/1～4/15）共 219461 篇文章。
  
 > 3/7 和 3/13 檔案讀取發生錯誤，但不影響結果。
  
+<a name="詞頻分析"></a>
 ## 詞頻分析
 
 使用 [fxsjy/jieba](https://github.com/fxsjy/jieba) 分詞，並加強特定詞彙的關聯性。
@@ -92,24 +107,27 @@ ignore = {'的','在','是','有','了','也','都','人','對','說','就','不
 
 ![](https://i.imgur.com/NqSgA0R.png)
 
+<a name="歧視性言論"></a>
 ## 歧視性言論
 
 參考前言提到的兩篇文章，此處僅定義「尼哥」為歧視性言論，統計各月份的文章和留言提到「尼哥」的次數。
 
-<img src="https://i.imgur.com/QLz8xdM.png" width="800" />
+<img src="https://i.imgur.com/QLz8xdM.png" width="600" />
 
-<img src="https://i.imgur.com/mSU6gqD.png" width="800" />
+<img src="https://i.imgur.com/mSU6gqD.png" width="600" />
 
 歧視性言論總計 2952 次，與 [文章 1](https://mp.weixin.qq.com/s?__biz=MzA3MTAyMzAxMg==&mid=2650529205&idx=2&sn=809777ddf6ece63eb374e0a2a554618a&chksm=873c9d7eb04b14684254f7ed3392ae4f3b1a246c91b7c00616f093917d7b9113b6adf3fd078f&mpshare=1&scene=1&srcid=0414ujyrmvkOXSnnFdh1MqAY&sharer_sharetime=1586856059175&sharer_shareid=4417ffdfb25ca55d018f7a9ed769a267#rd) 提到的 4031 略有差異；考慮總共 432633 則留言中有 2874 則涉及歧視性言論，佔比約千分之七，與 [文章 2](https://www.cw.com.tw/article/article.action?id=5099796) 提到的不及千分之五接近。
 
+<a name="發表歧視性言論的鄉民"></a>
 ### 發表歧視性言論的鄉民
 
 無論是發文或是留言，可以排除由特定幾位鄉民多次發表歧視性言論的可能性，從 `id` 和 `author` 上看來，大多是來自不同人。
 
-<img src="https://i.imgur.com/R3O660H.png" width="600" />
+<img src="https://i.imgur.com/R3O660H.png" width="400" />
 
-<img src="https://i.imgur.com/iEgDQao.png" width="600" />
+<img src="https://i.imgur.com/iEgDQao.png" width="400" />
 
+<a name="含有歧視性言論的發文"></a>
 ### 含有歧視性言論的發文
 
 [0127 [問卦] 落後國家尼哥當WHO高官？](https://www.ptt.cc/bbs/Gossiping/M.1580099155.A.D39.html)
@@ -268,11 +286,8 @@ ignore = {'的','在','是','有','了','也','都','人','對','說','就','不
 
 [0414 Re: [新聞] 快訊／阿滴募資《紐時》廣告今晚刊登　](https://www.ptt.cc/bbs/Gossiping/M.1586877587.A.4DE.html)
 
-
-
+<a name="含有歧視性言論的留言"></a>
 ### 含有歧視性言論的留言
-
-
 
 [0120 peter105096：整個聯合國都中共的形狀啊 尼哥國收](https://www.ptt.cc/bbs/Gossiping/M.1579532748.A.45D.html)
 
